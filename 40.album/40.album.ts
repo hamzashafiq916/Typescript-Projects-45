@@ -7,13 +7,12 @@
 // If the calling line includes a value for the number of tracks, add that value to the album’s Object.
 // Make at least one new function call that includes the number of tracks on an album.
 
-function make_album(artist: string, album: string, tracks?: number):
- { artist: string, album: string, tracks?: number } {
+function make_album(artist_name: string, album_title: string, tracks?: number) {
   const albumObj: { artist: string, album: string, tracks?: number } = {
-    artist: artist,
-    album: album
+    artist: album_title,
+    album: album_title
   };
-  if (tracks) {
+  if (tracks !== undefined) {
     albumObj.tracks = tracks;
   }
   return albumObj;
