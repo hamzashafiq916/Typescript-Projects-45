@@ -6,21 +6,21 @@
 /////////////////////////41///////////////////////////////////////////
 // Magicians: Make a array of magician’s names. Pass the array to a function called show_magicians(), which prints the name of each magician
 //  in the array.
-function showMagicians(magicians) {
+function show_Magicians(magicians) {
     // Print the name of each magician in the list
     magicians.forEach(word => {
         console.log(word.charAt(0).toUpperCase() + word.slice(1).toLowerCase());
     });
 }
 const magicians_names = ['hamza', 'uMEr', 'ALI'];
-showMagicians(magicians_names);
+show_Magicians(magicians_names);
 /////////////////42//////////////////////////////
 function makeGreat(magicians_names) {
     // Add "the Great" to each magician's name
-    return magicians_names.map(magicians_names => "the Great " + magicians_names);
+    return magicians_names.map(magicians_names => `The Great ${magicians_names}`);
 }
 // Modify the list to add "the Great" to each magician's name
 const greatMagicians = makeGreat(magicians_names);
 // Show modified list
 console.log("\nModified List with 'the Great':");
-showMagicians(greatMagicians);
+show_Magicians(greatMagicians);
