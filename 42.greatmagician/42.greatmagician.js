@@ -1,26 +1,19 @@
 "use strict";
-// ////////////////////////////////////41//////////////////////////////
-// function showMagicians(magicians: string[]): void {
-//   // Print the name of each magician in the list
-//   magicians.forEach(magician => {
-//       console.log(magician.charAt(0).toUpperCase() + magician.slice(1));
-//   });
-// }
-// const magicians: string[] = ['hamza', 'umer', 'ali'];
-// // Show original list
-// console.log("Original List:");
-// showMagicians(magicians);
+// Great Magicians: Start with a copy of your program from Exercise 39. Write a
+//  function called make_great() that modifies the array of magicians by adding
+//   the phrase the Great to each magician’s name. Call show_magicians() to see 
+//   that the list has actually been modified.
+/////////////////////////41///////////////////////////////////////////
 // Magicians: Make a array of magician’s names. Pass the array to a function called show_magicians(), which prints the name of each magician
 //  in the array.
-function show_Magicians(magicians_names) {
+function showMagicians(magicians) {
     // Print the name of each magician in the list
-    for (let i = 0; i < magicians_names.length; i++) {
-        console.log(magicians_names[i]);
-    }
+    magicians.forEach(word => {
+        console.log(word.charAt(0).toUpperCase() + word.slice(1).toLowerCase());
+    });
 }
-let magicians_names = ['hamza', 'umer', 'ali'];
-console.log("\nOriginal List");
-show_Magicians(magicians_names);
+const magicians_names = ['hamza', 'uMEr', 'ALI'];
+showMagicians(magicians_names);
 /////////////////42//////////////////////////////
 function makeGreat(magicians_names) {
     // Add "the Great" to each magician's name
@@ -30,4 +23,4 @@ function makeGreat(magicians_names) {
 const greatMagicians = makeGreat(magicians_names);
 // Show modified list
 console.log("\nModified List with 'the Great':");
-show_Magicians(greatMagicians);
+showMagicians(greatMagicians);
