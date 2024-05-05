@@ -9,8 +9,8 @@
 
 function make_album(artist_name: string, album_title: string, tracks?: number) {
   const albumObj: { artist: string, album: string, tracks?: number } = {
-    artist: album_title,
-    album: album_title
+    artist: artist_name,
+    album: album_title,
   };
   if (tracks !== undefined) {
     albumObj.tracks = tracks;

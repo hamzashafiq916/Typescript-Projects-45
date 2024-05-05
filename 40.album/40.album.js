@@ -9,8 +9,8 @@
 // Make at least one new function call that includes the number of tracks on an album.
 function make_album(artist_name, album_title, tracks) {
     const albumObj = {
-        artist: album_title,
-        album: album_title
+        artist: artist_name,
+        album: album_title,
     };
     if (tracks !== undefined) {
         albumObj.tracks = tracks;
