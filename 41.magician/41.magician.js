@@ -3,9 +3,9 @@
 //  in the array.
 function showMagicians(magicians) {
     // Print the name of each magician in the list
-    magicians.forEach(magician => {
-        console.log(magician.charAt(0).toUpperCase() + magician.slice(1));
+    magicians.forEach(word => {
+        console.log(word.charAt(0).toUpperCase() + word.slice(1).toLowerCase());
     });
 }
-const magicians = ['hamza', 'umer', 'ali'];
-showMagicians(magicians);
+const magicians_names = ['hamza', 'uMEr', 'ALI'];
+showMagicians(magicians_names);
