@@ -13,3 +13,4 @@ function make_sandwich(...items) {
 make_sandwich('lettuce', 'tomato', 'cheese');
 make_sandwich('ham', 'mayo');
 make_sandwich('turkey', `jelly`);
+make_sandwich();
