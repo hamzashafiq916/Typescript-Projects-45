@@ -5,39 +5,23 @@
 // // such as a color or an optional feature.
 // // Print the Object that’s returned to make sure all the information was stored correctly.
 
-// Define a type for the car object
-type Car = {
-  manufacturer: string;
-  model: string;
-  [key: string]: any; // Allow any other optional properties
-};
-
-// const car = make_car('Toyota', 'Corolla', { color: '
-
-// Function to store information about a car
 function storeCarInfo(
   manufacturer: string,
-  model: string,
-  ...details: { [key: string]: any }[]
-): Car {
-  const carInfo: Car = {
-    manufacturer: manufacturer,
-    model: model,
+  model: string, //index signature properties ke naam aur quantity nai pata
+  ...extraOption: { [key: string]: any }[] ///////... SPREAD OPERATOR Receive krke array ke andr define krta hai
+): object {
+  const carInfo = {
+    manufacturer,
+    model,
+    ...Object.assign({}, ...extraOption),
   };
-  // Add optional details to the car object
-  details.forEach((detail) => {
-    Object.keys(detail).forEach((key) => {
-      carInfo[key] = detail[key];
-    });
-  });
   return carInfo;
 }
 
-// Call the function with required and optional information
 const myCar = storeCarInfo(
   "Toyota",
   "Camry",
-  { color: "Silver" },
+  { color: "Silver" }, //bcoz it is object and key:value
   { year: 2022 },
   { features: ["Navigation", "Leather Seats"] }
 );
