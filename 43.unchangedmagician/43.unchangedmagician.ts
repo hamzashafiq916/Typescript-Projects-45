@@ -18,28 +18,35 @@ function show_Magicians(magicians: string[]) {
 }
 
 const magicians_names = ['hamza', 'uMEr', 'ALI'];
-console.log("\nOriginal List:");
-show_Magicians(magicians_names);
+// console.log("\nOriginal List:");
+// show_Magicians(magicians_names);
 
 /////////////////42//////////////////////////////
-function makeGreat(magicians_names: string[]) {
+function makeGreat(magician: string[]) {
   // Add "the Great" to each magician's name
-  return magicians_names.map(magicians_names => `The Great ${magicians_names}`);
+  return magician.map(name => `The Great ${name}`);
 }
 
-// Modify the list to add "the Great" to each magician's name
-const greatMagicians = makeGreat(magicians_names);
+//------------For Ex 43
+// // Modify the list to add "the Great" to each magician's name
+// const greatMagicians = makeGreat(magicians_names);
 
-// Show modified list
-console.log("\nModified List with 'the Great':");
-show_Magicians(greatMagicians);
+// // Show modified list
+// console.log("\nModified List with 'the Great':");
+// show_Magicians(greatMagicians);
 
 //////////////////43/////////////////////////////////////////////////////////
 
 // Call makeGreat with a copy of the original array to keep the original unchanged
-const great_Magicians = makeGreat([...magicians_names]);
+//Making a copy of oriiginal array through slice() function
+let copy_magicians = magicians_names.slice()
 
-// Show that the original list remains unchanged
-console.log("\nOriginal List (Unchanged):");
-show_Magicians(magicians_names);
+//Moddify the copied array to include the "The great" with their names
+let copyof_greatMagicians = makeGreat(copy_magicians)
 
+//show both arrays original and copied array
+
+console.log(`Original array list`);
+show_Magicians(magicians_names)
+console.log(`Mofified copy of Original array list`);
+show_Magicians(copyof_greatMagicians)
