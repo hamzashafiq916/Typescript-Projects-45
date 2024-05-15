@@ -9,4 +9,6 @@ function show_Magicians(magicians: string[]) {
 }
 
 const magicians_names = ['hamza', 'uMEr', 'ALI'];
+console.log("\nOriginal List:");
 show_Magicians(magicians_names);
+
